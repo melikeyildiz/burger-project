@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+       *{
+        box-sizing: border-box;
+       } 
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(234, 168, 243);
+        height: 70px;
+        align-items: center;
+        padding: 0px 15px;
+      }
+
+      .bannerDiv{
+        background-image: url('banner.jpg');
+        height: 400px;
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .banner{
+        text-align: center;
+        position: absolute;
+        top: 30px;
+        left: 0px;
+        right: 0px;
+      }
+
+      .link {
+        margin-right: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+
+      .imgMainDiv{
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+        flex-wrap: wrap;
+      }
+
+      .imgResDiv{
+        flex: 25%;
+      }
+
+      .img {
+        /* width: 200px; */
+        border: 1px dashed black;
+        border-radius: 30px;
+        /* margin-right: 30px; */
+        /* flex: 25%; */
+        margin: 20px;
+      }
+
+      .foto {
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
+      }
+
+      .img h3 {
+        text-align: center;
+        color: red;
+      }
+
+      .img p {
+        padding: 0px 20px;
+        text-align: center;
+      }
+
+      .img .pricePurchaseDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .img .price{
+        font-size: 28px;
+        color: red;
+      }
+
+      .img .purchase{
+        padding: 15px 10px;
+        border-radius: 30px;
+        border: none;
+        background-color: rgb(1, 122, 1);
+        color: white;
+        width: 100px;
+      }
+
+      .footer {
+        background-color: rgb(245, 158, 201);
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .footerList{
+        list-style-type: none;
+      }
+
+      .footerList li{
+        margin-top: 10px;
+      }
+
+      .footerList a{
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+
+    
+      .mobileIcon {
+        display: none;
+      }
+
+      
+
+      @media screen and (max-width: 600px) {
+
+        .imgResDiv{
+            flex: 100%;
+        }
+
+        .img{
+            /* width: 100%; */
+            margin-bottom: 30px;
+        }
+
+        .imgMainDiv{
+            flex-direction: column;
+        }
+
+        .mobileLinkDisplay {
+          display: none;
+        }
+
+        .mobileLink {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .header {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .mobileIcon {
+          display: block;
+        }
+
+        .headerimg {
+          display: none;
+        }
+
+        .footer{
+            flex-direction: column;
+            height: auto;
+        }
+
+        .footerList{
+            display: flex;
+            padding: 0px;
+        }
+
+        .footerList li{
+            margin-right: 10px;
+        }
+      }
+
+
+      @media screen and (max-width: 900px) {
+
+        .imgResDiv{
+            flex: 50%;
+        }
+      }
+
+    </style>
+    
+  </head>
+  <body>
+    <div id="headerDiv" class="header">
+      <div onclick="toggle()" class="mobileIcon">
+        <img src="icon.jpg" width="50px" height="50px" alt="" />
+      </div>
+
+      <div>
+        <img class="headerimg" src="burgerlogo.png" height="50px" alt="" />
+      </div>
+
+      <div id="navDiv" class="mobileLinkDisplay">
+        <div class="mobileLink">
+          <a class="link" href="">Home</a>
+          <a class="link" href="">About</a>
+          <a class="link" href="">Contact</a>
+        </div>
+      </div>
+    </div>
+
+      
+    </div>
+
+    <div class="imgMainDiv">
+        
+      <div class="imgResDiv">
+        <div class="img">
+            <img class="foto" src="burger.jpg" alt="" />
+            <h3>Kasap Burger</h3>
+            <p>Bol Malzemeli Efsane Burger</p>
+            <div class="pricePurchaseDiv">
+                <p class="price">45.99 <i>TL</i></p>
+                <button class="purchase">Satın Al</button>
+            </div>
+          </div>
+      </div>
+
+      <div class="imgResDiv">
+        <div class="img">
+            <img class="foto" src="burger.jpg" alt="" />
+            <h3>Kasap Burger</h3>
+            <p>Bol Malzemeli Efsane Burger</p>
+            <div class="pricePurchaseDiv">
+                <p class="price">45.99 <i>TL</i></p>
+                <button class="purchase">Satın Al</button>
+            </div>
+          </div>
+      </div>
+
+      <div class="imgResDiv">
+        <div class="img">
+            <img class="foto" src="burger.jpg" alt="" />
+            <h3>Kasap Burger</h3>
+            <p>Bol Malzemeli Efsane Burger</p>
+            <div class="pricePurchaseDiv">
+                <p class="price">45.99 <i>TL</i></p>
+                <button class="purchase">Satın Al</button>
+            </div>
+          </div>
+      </div>
+
+      <div class="imgResDiv">
+        <div class="img">
+            <img class="foto" src="burger.jpg" alt="" />
+            <h3>Kasap Burger</h3>
+            <p>Bol Malzemeli Efsane Burger</p>
+            <div class="pricePurchaseDiv">
+                <p class="price">45.99 <i>TL</i></p>
+                <button class="purchase">Satın Al</button>
+            </div>
+          </div>
+      </div>
+
+      
+    </div>
+
+
+
+    <div class="imgMainDiv">
+        
+        <div class="imgResDiv">
+          <div class="img">
+              <img class="foto" src="burger.jpg" alt="" />
+              <h3>Kasap Burger</h3>
+              <p>Bol Malzemeli Efsane Burger</p>
+              <div class="pricePurchaseDiv">
+                  <p class="price">45.99 <i>TL</i></p>
+                  <button class="purchase">Satın Al</button>
+              </div>
+            </div>
+        </div>
+  
+        <div class="imgResDiv">
+          <div class="img">
+              <img class="foto" src="burger.jpg" alt="" />
+              <h3>Kasap Burger</h3>
+              <p>Bol Malzemeli Efsane Burger</p>
+              <div class="pricePurchaseDiv">
+                  <p class="price">45.99 <i>TL</i></p>
+                  <button class="purchase">Satın Al</button>
+              </div>
+            </div>
+        </div>
+  
+        <div class="imgResDiv">
+          <div class="img">
+              <img class="foto" src="burger.jpg" alt="" />
+              <h3>Kasap Burger</h3>
+              <p>Bol Malzemeli Efsane Burger</p>
+              <div class="pricePurchaseDiv">
+                  <p class="price">45.99 <i>TL</i></p>
+                  <button class="purchase">Satın Al</button>
+              </div>
+            </div>
+        </div>
+  
+        <div class="imgResDiv">
+          <div class="img">
+              <img class="foto" src="burger.jpg" alt="" />
+              <h3>Kasap Burger</h3>
+              <p>Bol Malzemeli Efsane Burger</p>
+              <div class="pricePurchaseDiv">
+                  <p class="price">45.99 <i>TL</i></p>
+                  <button class="purchase">Satın Al</button>
+              </div>
+            </div>
+        </div>
+  
+        
+      </div>
+
+    
+
+    <div class="footer">
+      <ul class="footerList">
+        <li><a href="">Anasayfa</a></li>
+        <li><a href="">Hakkımızda</a></li>
+        <li><a href="">İletişim</a></li>
+      </ul>
+
+      <img src="burgerlogo.png" height="80px">
+
+      <ul class="footerList">
+        <li><a href="">Burgerler</a></li>
+        <li><a href="">Restoranlar</a></li>
+        <li><a href="">Kariyer</a></li>
+      </ul>
+    </div>
+
+
+
+    <script>
+      function toggle() {
+        let x = document.getElementById("navDiv");
+        let y = document.getElementById("headerDiv");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.height = "auto";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
